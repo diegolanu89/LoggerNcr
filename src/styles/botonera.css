@@ -1,0 +1,147 @@
+#root{
+  --reception-color: transparent;
+  --reception-width:400px;
+  --reception_height:640px;
+}
+
+p {
+position: relative;
+left:0px;
+width:100%;
+text-align: center;
+}
+
+#contenedor {
+position:absolute;
+content: '';
+width: 400px;
+height:635px;
+box-shadow: inset 0px 50px 50px  rgb(218, 201, 201);
+filter: blur(0px);
+border-radius: 20px 20px 0px 0px;
+border:5px rgba(119, 114, 114, 0.199) solid;
+background: inherit;
+animation: aparecer 0.7s forwards;
+}
+
+#title{
+width:100%;
+color:white;
+font-weight: bolder;
+font-size: 50px;
+margin-top:10px;
+margin-left: 0px;
+}
+
+#body_recep{
+width:100%;
+margin-top: 40px;
+color:rgb(212, 204, 204);
+font-size: 30px;
+text-align: center;
+margin-left: 0px;
+}
+
+
+#reception {
+background-color: transparent;
+width: 400px;
+height:640px;
+border-radius: 10px;
+text-align:center;
+
+}
+
+#reception::after {
+content: '';
+position: relative;
+top: -200%;
+right: -10%;
+bottom: -10%;
+left: -10%;
+background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+transform: rotateZ(60deg) translate(-6em, 7.5em);
+}
+
+#reception {
+background: transparent;
+color: #fff;
+font-size: 14px;
+border-radius: 0.5em;
+padding: 0 0em;
+position: relative;
+overflow: hidden;
+line-height: 32px;
+}
+
+#reception:hover::after, #reception:active::after {
+animation: sheen2 1.0s forwards;
+}
+/*======================================*/
+
+button.botonera::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+  transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+
+button.botonera::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+  transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+button {
+  background: #e5ac8e;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 0.5em;
+  position: relative;
+  overflow: hidden;
+  line-height: 32px;
+}
+
+button.botonera{
+  outline:none;
+  background-color: transparent;
+  margin-top: 20px;
+  width:350px;
+  height:70px;
+  box-shadow: inset 0 10px 10px rgb(218, 201, 201);
+  filter: blur(0px);
+  border-radius: 10px;
+  border:5px rgba(119, 114, 114, 0.199) solid;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 0.5em;
+  padding: 0 1em;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+button.botonera:hover::after, button.botonera:active::after {
+  animation: sheen 1s forwards;
+}
+
+button.botonera:hover{
+    color:rgb(255, 187, 0);
+    font-size: 15px;
+    transition: 1s;
+}
+
+button.botonera:active{
+    transition: 0.6s;
+  box-shadow: inset 0 -10px 10px rgb(211, 175, 57);
+}
+
