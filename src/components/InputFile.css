@@ -1,5 +1,6 @@
 #conteiner_file{
     border:1px solid;
+    padding:10px;
 }
 
 #conteiner_file_2{
@@ -8,12 +9,51 @@
 
 #tittle_file{
     border:1px solid;
+    padding: 20px;
+    font-size: 30px;
 }
 
 #conteiner_input{
-    border:1px solid;
+    border: 1px solid;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .subir{
-    border:1px solid;
+   
+    border: 1px solid;
+    margin: 10px;
+    height: 50px;
+    width: 150px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#info{
+    margin: 10px;
+    height: 50px;
+    width: 150px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    display: inline-block; 
+    margin-bottom: 0px; 
 }

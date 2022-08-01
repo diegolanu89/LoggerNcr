@@ -1,6 +1,6 @@
 import * as React from "react"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import MainMenu from './components/MainMenu.jsx'
+import MainMenu from './components/MainMenu.tsx'
 import Loger from "./components/Loger.tsx";
 
 function App() {

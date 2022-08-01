@@ -1,19 +1,19 @@
 module.exports = function () {
-    var request = {}
+    
     return {
         logger: function (data) {
-            request.info = 'App for read logs of SSbrowser and Xfsservice';
-            return request;
+            return 'App for read logs of SSbrowser and Xfsservice';
+            
         },
 
         tools: function (data) {
-            request.info =  'Differents softwares for develop';
-            return request;
+            return  'Differents softwares for develop';
+            
         },
 
-        info: function (data) {
-            request.info =  'General info of NCR';
-            return request;
+        wiki: function (data) {
+            return  'General info of NCR';
+            
         },
 
         

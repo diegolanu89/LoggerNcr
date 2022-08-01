@@ -25,7 +25,6 @@ interface Props {
 
 export const InputFile = ({ setFile }: Props) => {
 
-    //const [file, setData] = useState<string[]>([]);
     const [my_style, setStyle] = useState<React.CSSProperties>({}) 
     const[name,setName]=useState("")
     const[alert,setAlert]=useState<alert>({message:''})
@@ -34,7 +33,7 @@ export const InputFile = ({ setFile }: Props) => {
     const handleFiles = () => {
         var file_uploaded = document.getElementById('file-upload')
         var name_file = (file_uploaded?file_uploaded.files[0].name:false);
-        setName(name_file?'':name_file);
+        setName(name_file);
         setAlert(name_file?{message:"FILE UPLOAD"}:{message:"ERROR"});
         var flags = Object.values(Flags)
         var output :string []=[];
@@ -50,7 +49,6 @@ export const InputFile = ({ setFile }: Props) => {
                             }
                 });
          }
-        //setData(output);
         setFile(output?output:[""])
         reader.readAsBinaryString(document.getElementById('file-upload').files[0]);
     }
@@ -75,15 +73,16 @@ export const InputFile = ({ setFile }: Props) => {
                         </label>
                         <input type="file"
                             id="file-upload"
-                            value={name}
+                            value=""
                             required onChange={() => handleFiles()}
                             style={{ display: 'none' }}
                         >
                         </input>
-
+                        <div id="info">{name}</div>
                     </div>
+                    
                 </div>
-                    <div id="info">{name}</div>
+                
             </div>
 
         </div>

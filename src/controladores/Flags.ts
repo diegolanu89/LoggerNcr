@@ -19,5 +19,6 @@ export enum Flags {
     config = "[CONF]",
     wait = "[WAIT]",
     ticketBody = "[TBODY]",
+    ready = "is ready",
     
 }
