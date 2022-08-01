@@ -1,0 +1,23 @@
+export enum Flags {
+    init = "[INIT]",
+    req = "[REQ]",
+    resp = "[RES]",
+    tran = "[TRAN]",
+    err = "[ERR]",
+    mix = "[MIX]",
+    mock = "[MOCK]",
+    ticket ="[TICK]",
+    cdm = "[CDM]",
+    return = "[RETURN]",
+    retry = "[RETRY]",
+    status = "[STATUS]",
+    screen = "[SCREEN]",
+    vdm = "[VDM]",
+    login = "[LOGIN]",
+    key = "[KEY]",
+    touch = "[TOUCH]",
+    config = "[CONF]",
+    wait = "[WAIT]",
+    ticketBody = "[TBODY]",
+    
+}

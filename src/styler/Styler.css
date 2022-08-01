@@ -1,0 +1,172 @@
+/*====================STYLER===================*/
+
+.styler{
+    
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 650px;
+  }
+  
+  
+  
+  #styler_options{
+    position: absolute;
+      background-color: transparent;
+      top: 10%;
+      right: 10%;
+      width: 500px;
+      height: 100%;
+    }
+  
+    #prueba{
+    position:absolute;
+    top:10px;
+    background-color: rgb(9, 10, 9);
+    width:100%;
+    height:100%;
+    border-radius: 5px;
+      color: white;
+    overflow: hidden;
+      box-shadow: inset 5px 1px 10px rgb(218, 201, 201);
+      filter: blur(0px); 
+    border: 2px rgba(119, 114, 114, 0.199) solid; 
+    text-align: center;
+  }
+  
+  #styler_prop{
+    margin-left: 1%;
+    margin-top: 3%;
+    width:300px;
+    color: white;
+    background-color: transparent;
+    border: 1px white solid;
+  }
+  
+  
+  
+  .b-style{
+    background-position: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border:none;
+    outline: none;
+    width:30px;
+    height:30px;
+    margin:5px;
+    text-decoration: none;
+    border-radius: 100%;
+    border: 0px solid;
+    filter: invert(100);
+  }
+  
+  
+  
+  .b-style:focus{
+    outline: none;
+  }
+  
+  .b-style:active{
+    transition: 1s;
+    filter: brightness(100);
+    filter: contrast(175%) brightness(3%) drop-shadow(0px 0px 1px rgb(228, 228, 230)) 
+   
+  }
+  
+  form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    justify-content: space-around;
+    padding: .75rem;
+    color: #fafcff;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 87.5%;
+    border-bottom: 3px double rgba(250,252,255, .67);
+  }
+  form div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  select {
+    font-size: 87.5%;
+  }
+  
+  
+    /*=================================PALETA==========================================*/
+  
+    #paleta{
+      margin:15px;
+    }
+  
+    #paleta_prop{
+      width:30px;
+      height:30px;
+      border:1px solid white;
+      box-shadow:  5px 5px 5px rgb(218, 201, 201);
+      margin-left: 10px;
+      margin-top: 4px;
+    }
+  
+    #font{
+      background: #ffffff00;
+      color: white;
+      border: none;
+      /* border-radius: 19px; */
+      /* width: 70px; */
+      /* height: 65px; */
+      margin-left: 17px;
+  
+    }
+  
+    /*==============RANGE INPUT==========================================================*/
+  
+    input[type='range'],
+  input[type='range']::-webkit-slider-runnable-track,
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width:350px;
+    height:10px;
+    background-color: rgb(36, 32, 32);
+    box-shadow: inset 1px 1px 1px rgb(218, 201, 201);
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  
+  input[type='range']:focus {
+    outline: none;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    margin-top: -15px;
+    width:20px;
+    height:35px;
+    background-color: rgb(21, 21, 28);
+    border-radius: 10px;
+    border:solid 1px rgb(109, 106, 106);
+    box-shadow: inset 1px 1px 1px rgb(218, 201, 201);
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track:hover {
+    box-shadow: inset 2px 2px 2px rgb(255, 4, 4);
+  }
+  
+  input[type=range]::-webkit-slider-thumb:hover {
+    box-shadow: inset 2px 2px 2px rgb(255, 4, 4);
+  }
+  
+  input[type=range]::-webkit-slider-thumb:active {
+    width:25px;
+    height:35px;
+    box-shadow: inset 3px 3px 3px rgb(232, 224, 224);
+  }
+  
+  #range_label{
+    width:20px;
+    border:none;
+    margin-left:250px;
+    text-align: right;
+  
+  }
