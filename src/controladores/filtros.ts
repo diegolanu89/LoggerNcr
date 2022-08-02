@@ -48,7 +48,15 @@ export async function build_lines(e: string[]) {
     } catch (err) {
         return err
     }
+}
 
+export async function filter_by_flags(e: data_line[],f:string[]) {
+    try {
+        const result = await filter(e,f)
+        return result
+    } catch (err) {
+        return err
+    }
 }
 
 /*LINEAS ===================================================================*/ 
@@ -96,12 +104,49 @@ const identificar_info = (flags_detected:string[],e:string)=>{
 
 
 const fragment_sections = (lines: data_line[]) => {
+    var limites:number[]=[]
+    for(let i = 0;i<lines.length;i++){
+        let flags_actuales = lines[i].flags
+        if(flags_actuales?.includes(Flags.ready)){
+            limites.push(i)
+        }
+    }
+    //console.log(limites)
+
+    var secciones:data_line[][] = []
+    var bloque :data_line[]=[]
+    for(let i = 0;i<lines.length;i++){
+        bloque.push(lines[i])
+        if(limites.includes(i)){
+            secciones.push(bloque)
+            bloque = []
+        }
+    }
+    //console.log(secciones)
     return new Promise(resolve => {
-        resolve("data")
+        resolve(secciones)
     })
 }
 
-/*const identificar_section =()=>{
 
-}*/
 
+/*CRONOGRAMA=======================================================================*/
+
+const filter = (lines: data_line[], flags:string[]) => {
+    var data_filtered:data_line[]=[]
+        var posee_flag=false
+        lines.forEach((e:data_line)=>{
+            posee_flag=false
+            for(let i=0;i<flags.length;i++){
+                if(e.flags?.includes(flags[i]))
+                    posee_flag=true
+               }
+            if(posee_flag){
+                data_filtered.push(e)
+            }
+        })
+
+    return new Promise(resolve => {
+        resolve(data_filtered)
+    })
+}

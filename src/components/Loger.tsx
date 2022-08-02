@@ -21,10 +21,20 @@ export const Loger = () => {
   const [file, setFile] = useState<string[]>([])
   const [sections, setSesiones] = useState<data_line[] | undefined>([])
   // eslint-disable-next-line 
-  const [operaciones,setOperaciones] = useState<data_line[] | undefined>([])
+  const [operaciones, setOperaciones] = useState<data_line[] | undefined>([])
 
   useEffect(() => {
-  }, [])
+    console.log("FILE NEW")
+  }, [file])
+
+  useEffect(() => {
+    console.log("CAMBIO LAS SESIONES")
+  }, [sections])
+
+  useEffect(() => {
+    console.log("CAMBIO LAS OPERACIONES")
+    console.log(operaciones)
+  }, [operaciones])
 
 
 
@@ -36,9 +46,9 @@ export const Loger = () => {
 
       <Visor data={file} setSesiones={setSesiones} />
 
-      <VisorSesion data={sections} setOperaciones={setOperaciones}/>
+      <VisorSesion data={sections} setOperaciones={setOperaciones} />
 
-      <VisorOperacion data={file} />
+      <VisorOperacion data={operaciones} />
     </div>
 
   </div>

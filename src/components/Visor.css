@@ -4,6 +4,18 @@
     padding:10px;
 }
 
+#conteiner_visor_sesion{
+    border: 1px solid;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
 #linea{
     border:1px solid;
     border: 1px solid;
@@ -25,4 +37,58 @@
     overflow: auto;
     overflow-x: hidden;
     max-height: 500px;
+}
+
+#conteiner_operaciones{
+    border: 1px solid;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#conteiner_log_operacion{
+    border:1px solid;
+    margin:0px;
+    padding:10px;
+    width:50%;
+}
+
+#conteiner_crognograma{
+    border:1px solid;
+    margin:0px;
+    padding:10px;
+    width:50%
+}
+
+#selectores_filtros{
+    border: 1px solid;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#conteiner_nod_cronograms{
+    border: 1px solid;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius:100%;
 }

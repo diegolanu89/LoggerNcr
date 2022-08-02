@@ -20,10 +20,8 @@ export const Visor = ({ data, setSesiones }: Props) => {
 
 
     const [lines, setLines] = useState<any[] | undefined>([])
-    
 
     useEffect(() => {
-        console.log("Info update");
         setTimeout(() => {
             if (data !== undefined) {
                 build_lines(data).then((e:data_line[]) => {
@@ -52,10 +50,10 @@ export const Visor = ({ data, setSesiones }: Props) => {
 
     return <div>
 
-
+    <div id="conteiner_visor">Líneas de la muestras</div>
 
         <div id="conteiner_visor">
-            <div>Líneas de la muestras</div>
+            
 
             <div id="scroll_visor">
                 {lines}
