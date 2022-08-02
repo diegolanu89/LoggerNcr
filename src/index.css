@@ -1,0 +1,35 @@
+::-webkit-scrollbar
+        {
+          width: 20px;
+          height: 100%;
+        }
+        
+        ::-webkit-scrollbar-track
+        {
+          background: transparent;
+          border-radius: 46px;
+          border: solid 2px rgba(44, 167, 33, 0.5);
+        }
+        
+        
+        /* Thumb */
+        ::-webkit-scrollbar-thumb
+        {
+          background: #404040;
+          border-radius: 30px;
+          height: 30px;
+          background: linear-gradient(90deg, rgba(9, 121, 82, 0) 5%, rgba(20, 182, 99, 0.75) 26%, rgb(0, 212, 255) 100%);
+          
+        }
+        
+        ::-webkit-scrollbar-thumb:hover
+        {
+          background: linear-gradient(90deg, rgba(9, 121, 82, 0) 5%, rgba(20, 182, 99, 0.75) 26%, rgb(0, 212, 255) 100%);
+          
+        }
+        
+        ::-webkit-scrollbar-thumb:active
+        {
+          background: linear-gradient(90deg, rgba(9, 121, 82, 0) 5%, rgba(20, 182, 99, 0.75) 26%, rgb(0, 212, 255) 100%);
+          
+        }

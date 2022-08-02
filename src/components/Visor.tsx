@@ -6,6 +6,7 @@ import { build_lines } from '../controladores/filtros.ts'
 
 interface Props {
     data?: string[]
+    setSesiones:(n: data_line[]) => data_line[]
 }
 
 type data_line={
@@ -15,19 +16,20 @@ type data_line={
     info: string|null,
 }
 
-export const Visor = ({ data }: Props) => {
+export const Visor = ({ data, setSesiones }: Props) => {
 
 
     const [lines, setLines] = useState<any[] | undefined>([])
+    
 
     useEffect(() => {
         console.log("Info update");
         setTimeout(() => {
             if (data !== undefined) {
                 build_lines(data).then((e:data_line[]) => {
-                    var divs = []
+                    var lines = []
                     for (let i = 0; i < e.length; i++) {
-                        divs.push(
+                        lines.push(
                                     <div id="linea" key={i + 'l'}>
                                        {e[i].hora?<div id="linea_colum">{e[i].hora}</div>:null}
                                        {e[i].app?<div id="linea_colum">{e[i].app}</div>:null}
@@ -36,11 +38,14 @@ export const Visor = ({ data }: Props) => {
                                     </div>
                                 )
                     }
-                    setLines(divs)
+                    if(lines!==undefined){
+                        setSesiones(e)
+                    }
+                    setLines(lines)
                 })
             }
         }, 1000)
-
+// eslint-disable-next-line 
     }, [data]);
 
 
@@ -52,7 +57,7 @@ export const Visor = ({ data }: Props) => {
         <div id="conteiner_visor">
             <div>Líneas de la muestras</div>
 
-            <div>
+            <div id="scroll_visor">
                 {lines}
             </div>
         </div>

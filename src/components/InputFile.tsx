@@ -5,7 +5,7 @@ import store from '../store';
 import Alert from './Alert';
 import { Provider as AlertProvider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
-import Styler from '../styler/Styler';
+//import Styler from '../styler/Styler';
 import { Flags } from '../controladores/Flags';
 import './InputFile.css'
 import React from "react";
@@ -20,12 +20,12 @@ type alert={
 }
 
 interface Props {
-  setFile?: (n: string[]) => string[]
+  setFile: (n: string[]) => string[]
 }
 
 export const InputFile = ({ setFile }: Props) => {
 
-    const [my_style, setStyle] = useState<React.CSSProperties>({}) 
+    //const [my_style, setStyle] = useState<React.CSSProperties>({}) 
     const[name,setName]=useState("")
     const[alert,setAlert]=useState<alert>({message:''})
    
@@ -53,6 +53,8 @@ export const InputFile = ({ setFile }: Props) => {
         reader.readAsBinaryString(document.getElementById('file-upload').files[0]);
     }
 
+    //<Styler toggleStyle={setStyle} prop_style={my_style} ></Styler>
+
     return (
         <div>
 
@@ -62,7 +64,7 @@ export const InputFile = ({ setFile }: Props) => {
                 </AlertProvider>
             </Provider>
 
-           <Styler toggleStyle={setStyle} prop_style={my_style} ></Styler>
+           
            
            <div id="conteiner_file">
                 <div id="conteiner_file_2">

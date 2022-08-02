@@ -24,6 +24,23 @@ export const formatNumber = (e: string | number) => {
     return new Intl.NumberFormat(['es-MX'], { minimumFractionDigits: 2, maximumFractionDigits: 2, }).format(number)
 }
 
+
+type data_line={
+    hora?: string|null,
+    app: string|null,
+    flags: string[]|null,
+    info: string|null,
+}
+
+export async function build_sections(e: data_line[]) {
+    try {
+        const result = await fragment_sections(e)
+        return result
+    } catch (err) {
+        return err
+    }
+}
+
 export async function build_lines(e: string[]) {
     try {
         const result = await fragment_lines(e)
@@ -34,15 +51,9 @@ export async function build_lines(e: string[]) {
 
 }
 
-type data_line={
-    hora?: string|null,
-    app: string|null,
-    flags: string[]|null,
-    info: string|null,
-}
+/*LINEAS ===================================================================*/ 
 
 const fragment_lines = (lines: string[]) => {
-
     var data:data_line[]=[]
     lines.forEach((e) => {
         const info = e.split(' - ')[1]
@@ -59,27 +70,38 @@ const fragment_lines = (lines: string[]) => {
             hora: e.substr(0, 24),
             app: app,
             flags: flags_detected,
-            info: identifivar_info(flags_detected,info),
+            info: identificar_info(flags_detected,info),
         })
     });
-    console.log(data[6])
     return new Promise(resolve => {
         resolve(data)
     })
-
 }
 
-const identifivar_info = (flags_detected:string[],e:string)=>{
+const identificar_info = (flags_detected:string[],e:string)=>{
     var type_app = ['[ConsumerApplication]','[SupervisorApplication]','\r']
     var info = e
     for(let i=0;i<flags_detected.length;i++){
         info = info.replace(flags_detected[i], '')
     }
-
     type_app.forEach((e) => {
         info = info.replace(e, '')
     });
-
     return info.length>1?info:null
 }
+
+
+
+/*SECCIONES===================================================================*/
+
+
+const fragment_sections = (lines: data_line[]) => {
+    return new Promise(resolve => {
+        resolve("data")
+    })
+}
+
+/*const identificar_section =()=>{
+
+}*/
 

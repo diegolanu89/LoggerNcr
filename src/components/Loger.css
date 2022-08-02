@@ -1,0 +1,5 @@
+#scroll_logger{
+    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}

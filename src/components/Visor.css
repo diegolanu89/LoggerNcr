@@ -20,3 +20,9 @@
     min-width: 200px;
     padding: 5px;
 }
+
+#scroll_visor{
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 500px;
+}
